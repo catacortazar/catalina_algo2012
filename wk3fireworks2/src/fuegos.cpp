@@ -11,7 +11,7 @@ fuegos::fuegos(){
     
     int lastSecond = 0; //initia el ultimo segundo a cero
     
-    for (int i = 0; i < 50; i++){
+    for (int i = 0; i < 70; i++){
 		particle myParticle;
 		
         float angle = ofRandom(0.0, 360.0);
@@ -41,21 +41,18 @@ void fuegos::draw(){
     
     
     if (s != lastSecond){
-        printf("time %d \n", ofGetSeconds());
-        
+        printf("time %d \n", ofGetSeconds());  
         lastSecond = s;
+        if (s%5==0){
+            for (int i = 0; i < particles.size(); i++){
+                float angle = ofRandom(0.0, 360.0);
+                particles[i].setInitialCondition(posicionx, posiciony,(i * cos(angle)),(i * -sin(angle))); // to start as circle;
+                
+                particles[i].stroke.clear();
+            }
         
     }
-   if (s%5==0){
-        
-        
-        for (int i = 0; i < particles.size(); i++){
-            
-          
-            float angle = ofRandom(0.0, 360.0);
-            particles[i].setInitialCondition(posicionx, posiciony,(i * cos(angle)),(i * -sin(angle))); // to start as circle;
-//            
-      }
+
         
     }
     

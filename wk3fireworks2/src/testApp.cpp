@@ -8,9 +8,9 @@ void testApp::setup(){
 	ofSetVerticalSync(true);
 	ofSetFrameRate(60);
 	
-	ofBackground(255, 255, 255);
+	ofBackground(0, 0, 0);
 	
-    for (int i = 0; i < 1; i++){
+    for (int i = 0; i < 3; i++){
 		fuegos myFire;
 	
 		fire.push_back(myFire);

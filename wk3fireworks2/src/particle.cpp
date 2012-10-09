@@ -54,7 +54,7 @@ void particle::update(){
         
         stroke.addVertex(ofPoint(pos.x,pos.y)); //para que la linea sea continua y empezar a dibujar
         if(stroke.getVertices().size()>ofRandom(3,10)){
-            stroke.getVertices().erase(stroke.getVertices().begin());
+        stroke.getVertices().erase(stroke.getVertices().begin());
         }
     }
 
@@ -63,16 +63,13 @@ void particle::update(){
 
 //------------------------------------------------------------
 void particle::draw(){
-    ofSetColor(ofRandom(192, 205), ofRandom(0, 255), ofRandom(0, 70), ofRandom(0, 255));
     ofEnableAlphaBlending();
+    ofSetColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255));
     ofCircle(pos.x, pos.y, ofRandom(0.5, 3.0));
+    ofSetLineWidth(3); //set the width of the line
     stroke.draw();
 
-//    if ((pos.x >= ofGetWidth()) || (pos.x <= 0) || (pos.y >= 0) || (pos.y <= ofGetHeight())){
-//        lines.push_back(stroke);
-//        
-//        stroke.clear();
-//    }
+
 }
 
 

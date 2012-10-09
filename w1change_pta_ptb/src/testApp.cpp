@@ -32,7 +32,7 @@ void testApp::update(){
 	// to see pct in the console
 	//printf("%f \n", pct)
 	 
-	pct += 0.0007f;							// increase by a certain amount
+	pct += 0.007f;							// increase by a certain amount
 	if (pct > 1) {
 		pct = 0;							// just between 0 and 1 (0% and 100%)
 	}	
@@ -66,9 +66,12 @@ void testApp::mousePressed(int x, int y, int button){
     
     //counter = counter ++; DOUBT: if i use one = it doesn't work! 
     
-    counter == counter ++;// double = is testing equality
+    counter ++;// double = is testing equality
     
-	
+    //  counter = counter + 1;
+    //  counter <----- counter + 1;
+    
+   
     if (counter%2==0){              //if the reminder is 0 change posa and use a fix posb
         myRectangle.posb.x = mouseX;
         myRectangle.posb.y = mouseY;

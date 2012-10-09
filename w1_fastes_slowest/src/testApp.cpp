@@ -32,13 +32,13 @@ void testApp::update(){
 	
 	for (int i = 0; i < 2; i++){
         
-//    if(i == 0){                         // fastest - imperceptible
-//        pct += 0.02f;							// increase by a certain amount
-//        if (pct > 1) pct = 0;					// just between 0 and 1 (0% and 100%)
-//      
-//		myRectangles[0].interpolateByPct(pct);		// go between pta and ptb
-//	
-//    }
+    if(i == 0){                         // fastest - imperceptible
+        pct += 0.02f;							// increase by a certain amount
+        if (pct > 1) pct = 0;					// just between 0 and 1 (0% and 100%)
+      
+		myRectangles[0].interpolateByPct(pct);		// go between pta and ptb
+	
+    }
         
     if(i == 1){                                 //  continuous (not discrete jumps
 
