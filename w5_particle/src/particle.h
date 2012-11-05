@@ -29,6 +29,10 @@ class particle
 		void bounceOffWalls();
 	
 	
+        ofPoint color;
+        ofPoint colorTarget;
+    
+    
 		float damping;
 
     protected:

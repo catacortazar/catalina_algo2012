@@ -173,6 +173,12 @@ void particle::setInitialCondition(float px, float py, float vx, float vy){
 void particle::update(){	
 	vel = vel + frc;
 	pos = pos + vel;
+    
+    
+    color.x = 0.95f * color.x + 0.05 * colorTarget.x;
+    color.y = 0.95f * color.y + 0.05 * colorTarget.y;
+    color.z = 0.95f * color.z + 0.05 * colorTarget.z;
+    
 }
 
 //------------------------------------------------------------
