@@ -86,8 +86,9 @@ void testApp::draw(){
         int step = 5;
         
         ofColor color = ofColor::fromHsb(hue,
-                                         ofMap( particles[i].pos.x, 0,ofGetWidth(), 0,255 ),
-                                         ofMap( particles[i].pos.y, ofGetHeight(),0, 0,255 ) );
+                                         ofMap( particles[i].pos.x, 0,ofGetWidth(), 0,255),
+                                         ofMap( particles[i].pos.y, ofGetHeight(),0, 0,255) );
+        color.a = ofRandom(0,255);
         ofSetColor( color );
         ofFill();
         
